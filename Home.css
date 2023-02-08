@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+body{
+  position: fixed;
+  background-color: white;
+  color: black;
+  font-family: 'Roboto Slab', serif;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.item1 { 
+  grid-area: header;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+}
+.item2 { 
+  grid-area: menu;
+}
+.item3 {
+  grid-area: main;
+  overflow-y: scroll;
+  overflow-x: scroll;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.item3::-webkit-scrollbar{
+  display: none;
+}
+.item5 { 
+  grid-area: footer;
+  font-weight: lighter;
+  font-size: small;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header header'
+    'menu main main main main main main'
+    'footer footer footer footer footer footer footer';
+    grid-template-rows: 8vh 1fr 5vh;
+    grid-template-columns: 25vh 1fr;
+  gap: 10px;
+  padding: 10px;
+  height: 99vh; 
+  width: 98vw;
+}
+
+/* 
+.grid-container > div {
+    border: 1px solid grey;
+}   
+ */
+
+.webelements {
+  display: inline-block;
+}
+
+.item1-left{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 1vw;
+}
+
+.item1-left > img {
+  height: 90%;
+  margin-left: 1vw;
+}
+
+.item1-middle{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.item1-middle > input{
+  float: left;
+  width: 30vw;
+  height: 4.6vh;
+  font-size: 16px;
+  padding-left: 10px;
+  border: 1px solid gray;
+  border-radius: 20px 0 0 20px;
+  background-color: white;
+  color: grey;
+  margin-left: 20%;
+}
+.item1-middle > a > .searchbut {
+  float: left;
+  width: 5vw;
+  height: 4.8vh;
+  background-color: white;
+  color: grey;
+  border: 1px solid grey;
+  border-radius: 0 20px 20px 0;
+  display : flex;
+  align-items : center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.item1-middle > span {
+  font-size: 30px;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  color: grey;
+}
+
+.item1-right{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.item1-right > span{
+  font-size: 30px;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  color: grey;
+}
+
+
+.item2 > div {
+  height: 50px;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 25px;
+  border-radius: 20px;
+  text-align:left;
+  font-size: large;
+}
+.item2 > div > span{
+  margin-right: 10px;
+}
+.item2 :hover{
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.item3 > .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 500px);
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+}
+.item3 > .wrapper > div {
+  margin-left: 30px;
+  max-height: 350px;
+}
+.item3 > .wrapper > div > a > .thumbnail {
+  height: 70%;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid grey;
+}
+.item3 > .wrapper > div > a > .videotitle {
+  font-size: large;
+  padding: 10px;
+}
+.item3 > .wrapper > div > .videodetails {
+  font-weight: lighter;
+  font-style: italic;
+  color: grey;
+  padding: 5px;  
+}
+.item3 > .wrapper > div > .creatorLogo {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  float: left;
+  padding: 5px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+}
+
+
+
+
+
+.item3 > .wrapper > div > .thumbnail {
+  height: 70%;
+  border-radius: 20px;
+  border: 1px solid grey;
+}
+
+.item3 > .wrapper > div:hover{
+  transition: .5s;
+  transform: scale(1.1,1.1);
+  z-index: 100;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px 5px grey;
+}
+
+.item3 > .wrapper > div > .videotitle {
+  font-weight: bold;
+  font-size: large;
+  padding: 10px;  
+}
+
+
+
+
+
+input[type="button"]{
+  cursor: pointer;
+}
